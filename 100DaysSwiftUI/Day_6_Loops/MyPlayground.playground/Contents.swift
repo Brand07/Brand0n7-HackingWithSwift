@@ -74,3 +74,45 @@ while roll != 20 {
 
 //if we're here it means the loop ended - we got a 20!
 print("Critical hit!")
+
+
+//LOOP CONTINUE
+
+let filenames = ["me.jpg", "work.doc", "sunset.png", "game.exe", "movie.mov"]
+for filename in filenames {
+    if filename.hasSuffix(".jpg") == false {
+        continue
+    }
+    print("Found picture: \(filename)")
+}
+
+//LOOPS - BREAK
+
+let number1 = 4
+let number2 = 14
+var multiples = [Int]()
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+        
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+print(multiples)
+
+//FIZZBUZZ TEST
+for i in 1...100 {
+    if i.isMultiple(of: 3) && i.isMultiple(of: 5) {
+        print("FizzBuzz")
+    } else if i.isMultiple(of: 3) {
+        print("Fizz")
+    } else if i.isMultiple(of: 5) {
+        print("Buzz")
+    } else {
+        print(i)
+    }
+    
+}
