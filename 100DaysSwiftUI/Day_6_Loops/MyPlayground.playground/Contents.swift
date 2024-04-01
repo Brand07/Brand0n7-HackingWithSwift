@@ -27,8 +27,19 @@ for i in 1...12 {
     for j in 1...12 {
         print(" \(j) x \(i) is \(j * i)")
     }
-    print()
+    print() //Prints a blank new line.
 }
 
+//Swift has a similar-but-different type of range that counts up to but excluding the final number: ..<. This is best seen in code:
 
+for i in 1...5 {
+    print("Counting from 1 through 5: \(i)")
+}
+
+print()
+
+for i in 1..<5 {
+    print("Counting 1 up to 5: \(i)")
+    
+}
 
